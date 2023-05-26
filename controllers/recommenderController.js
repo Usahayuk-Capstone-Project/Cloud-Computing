@@ -31,7 +31,21 @@ const GetRecommender = async (req, res, next) => {
   }
 };
 
+//For Update Recommender in Firestore (Database)
+const UpdateRecommender = async (req, res, next) => {
+  const uid = req.params.uid;
+  try {
+    const data = req.body;
+    const userDocRef = await firestore.collection('users').doc(uid);
+    await userDocRef.update(data);
+    res.status(200).send({ message: 'User record updated successfully' });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
 module.exports = {
   AddRecommender,
-  GetRecommender
+  GetRecommender,
+  UpdateRecommender
 };
