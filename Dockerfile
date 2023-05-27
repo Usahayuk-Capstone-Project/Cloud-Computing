@@ -1,6 +1,6 @@
 FROM node:16
 
-WORKDIR /config
+WORKDIR /index
 
 COPY package*.json ./
 RUN npm install
