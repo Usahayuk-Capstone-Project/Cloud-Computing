@@ -7,3 +7,7 @@ This service we use to containerized our API and backend services so it can be h
 We use firebase to help authenticate user with token and generate user ID automatically
 ### Firestore Database
 We use NoSQL database that contains user data, recommendation, and article they posted
+
+## Supported Tools and Programming Language
+* Express.js
+* Node.js
