@@ -9,5 +9,12 @@ We use firebase to help authenticate user with token and generate user ID automa
 We use NoSQL database that contains user data, recommendation, and article they posted
 
 ## Supported Tools and Programming Language
+### Language
 * Express.js
+### Environment
 * Node.js
+### Tools
+* Docker
+* Git
+* Github
+* Postman
