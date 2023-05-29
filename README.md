@@ -18,3 +18,14 @@ This repository contains backend service for our mobile application focused on A
 * Git
 * Github
 * Postman
+
+## Installation & Deployment
+1. Clone repository to Google Cloud console
+```
+git clone https://github.com/Usahayuk-Capstone-Project/Cloud-Computing.git
+cd Cloud-Computing
+```
+3. Go to Firebase and create firebase project
+4. Download the API key for the Web Firebase Client SDK and copy to the .env
+5. Download the serviceAccountKey.json from Firebase Admin SDK and upload it to the directory
+6. Replace the contain of _const serviceAccount_ match to the file directory serviceAccountKey has been uploaded
