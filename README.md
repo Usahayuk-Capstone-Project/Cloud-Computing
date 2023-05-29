@@ -4,6 +4,6 @@ This repository contains backend service for our mobile application focused on A
 ### Cloud Run
 This service we use to containerized our API and backend services so it can be hit by mobile application to use our services.
 ### Firebase Authentication
-We use firebase to autheticate user with token and generate user ID automatically
+We use firebase to help authenticate user with token and generate user ID automatically
 ### Firestore Database
-We use NoSQL database that contains user data and recommendation
+We use NoSQL database that contains user data, recommendation, and article they posted
