@@ -1,1 +1,4 @@
 ## Hai
+```
+git clone why
+```
