@@ -39,6 +39,7 @@ const GetArticle = async (req, res, next) => {
     const uid = req.params.uid;
     try {
       const data = req.body;
+      data.updateAt = new Date().toISOString();
       const userDocRef = await firestore.collection('articles').doc(uid);
       await userDocRef.update(data);
       res.status(200).send({ message: 'Article updated successfully' });
