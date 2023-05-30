@@ -21,10 +21,12 @@ app.use(bodyParser.json());
 const userRoutes = require('./routes/user-routes');
 const authRoutes = require('./routes/auth-routes');
 const recommenderRoutes = require('./routes/recommender-routes');
+const articleRoutes = require('./routes/article-routes');
 
 app.use('/api/user', userRoutes.routes);
 app.use('/api/auth', authRoutes.routes);
 app.use('/api/recommender', recommenderRoutes.routes);
+app.use('/api/article', articleRoutes.routes);
 
 // set post and listen for our requests
 app.listen(config.port,() => console.log('App is listening on url http://localhost:' + config.port))

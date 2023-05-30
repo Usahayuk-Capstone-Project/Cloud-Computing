@@ -7,8 +7,23 @@ const firestore = firebase.firestore();
 const AddRecommender = async (req, res, next) => {
   const uid = req.params.uid;
   try {
-    const data = req.body;
-    await firestore.collection('users').doc(uid).set(data);
+    const {jenis_usaha, skala_usaha, modal_usaha, 
+      bidang_usaha, omset_usaha, usia_targetpelanggan, 
+      gender_targetpelanggan, perkerjaan_targetpelanggan,
+      status_targetpelanggan, jenis_lokasi} = req.body;
+    await firestore.collection('users').doc(uid).set({
+      uid: uid,
+      jenis_usaha : jenis_usaha,
+      skala_usaha : skala_usaha,
+      modal_usaha : modal_usaha,
+      bidang_usaha : bidang_usaha,
+      omset_usaha : omset_usaha,
+      usia_targetpelanggan : usia_targetpelanggan,
+      gender_targetpelanggan : gender_targetpelanggan,
+      perkerjaan_targetpelanggan : perkerjaan_targetpelanggan,
+      status_targetpelanggan : status_targetpelanggan,
+      jenis_lokasi : jenis_lokasi,
+  });
     res.status(200).send({ message: 'User record updated successfully' });
   } catch (error) {
     res.status(400).send(error.message);

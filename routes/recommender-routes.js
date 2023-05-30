@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post('/:uid',AddRecommender);
 router.get('/:uid',GetRecommender);
-router.put('/:uid',UpdateRecommender)
+router.put('/:uid',UpdateRecommender);
 
 
 module.exports = {
