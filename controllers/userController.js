@@ -20,14 +20,13 @@ const GetUser = async (req, res, next) => {
 
 //For update data user with id in database
 const UpdateUser = async (req, res, next) => {
-    const {nama_lengkap, alamat_email, kata_sandi, no_telp} = req.body;
+    const {nama_lengkap, alamat_email, kata_sandi} = req.body;
     try {
         const uid = req.params.uid;
         const Record = await getAuth.auth().updateUser(uid, {
             displayName : nama_lengkap,
             email : alamat_email,
-            password : kata_sandi,
-            phoneNumber : no_telp
+            password : kata_sandi
         });
         res.status(200).send({message: 'User record updated successfuly', Record : Record});
     } catch (error) {

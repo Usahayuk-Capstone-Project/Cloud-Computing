@@ -5,7 +5,7 @@ require('firebase/auth');
 
 //For Sign Up (Make a account on Authenthication Firebase)
 const signUp = (req, res) => {
-  const { nama_lengkap, alamat_email, kata_sandi, no_telp } = req.body;
+  const { nama_lengkap, alamat_email, kata_sandi} = req.body;
   firebase
     .auth()
     .createUserWithEmailAndPassword(alamat_email, kata_sandi)
