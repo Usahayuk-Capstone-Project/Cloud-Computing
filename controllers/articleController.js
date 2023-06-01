@@ -7,10 +7,10 @@ const firestore = firebase.firestore();
 const AddArticle = async (req, res, next) => {
   const uid = req.params.uid;
   try {
-    const { title, tags, content } = req.body;
+    const { title, tags, penulis, content } = req.body;
     const createdAt = new Date().toISOString();
     const updateAt = createdAt;
-    const data = {uid, title, tags, content, createdAt, updateAt};
+    const data = {uid, title, tags, penulis, content, createdAt, updateAt};
     await firestore.collection('articles').doc(uid).set(data);
     res.status(200).send({ message: 'Article added successfully' });
   } catch (error) {
