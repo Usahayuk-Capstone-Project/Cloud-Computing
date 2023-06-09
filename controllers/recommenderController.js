@@ -9,16 +9,18 @@ const AddRecommender = async (req, res, next) => {
   try {
     const {skala_usaha, modal_usaha, 
       bidang_usaha, omset_usaha, usia_targetpelanggan, 
-      gender_targetpelanggan, perkerjaan_targetpelanggan,
+      gender_targetpelanggan, pekerjaan_targetpelanggan,
       status_targetpelanggan, jenis_lokasi_ } = req.body;
     await firestore.collection('users').doc(uid).set({
+      user_id : "",
+      jenis_usaha : "",
       skala_usaha : skala_usaha,
       modal_usaha : modal_usaha,
       bidang_usaha : bidang_usaha,
       omset_usaha : omset_usaha,
       usia_targetpelanggan : usia_targetpelanggan,
       gender_targetpelanggan : gender_targetpelanggan,
-      perkerjaan_targetpelanggan : perkerjaan_targetpelanggan,
+      pekerjaan_targetpelanggan : pekerjaan_targetpelanggan,
       status_targetpelanggan : status_targetpelanggan,
       jenis_lokasi_ : jenis_lokasi_ ,
   });
