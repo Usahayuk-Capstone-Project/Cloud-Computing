@@ -37,7 +37,12 @@ const GetRecommender = async (req, res, next) => {
     const userDocRef = await firestore.collection('users').doc(uid);
     const data = await userDocRef.get();
     if (data.exists) {
-      res.status(200).send({ code: 200, user: data.data() });
+      const user = data.data();
+      if (user && user.Hasil_rekomendasi) {
+        res.status(200).send({ code: 200, Hasil_rekomendasi: user.Hasil_rekomendasi });
+      } else {
+        res.status(404).send('The data is still not generated');
+      }
     } else {
       res.status(404).send('Document does not exist!');
     }
@@ -45,6 +50,7 @@ const GetRecommender = async (req, res, next) => {
     res.status(500).send(error.message);
   }
 };
+
 
 module.exports = {
   AddRecommender,
