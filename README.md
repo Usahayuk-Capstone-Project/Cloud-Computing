@@ -46,7 +46,7 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 3. Deploy it to the Cloud Run
 * Go to **Navigation Menu -> Cloud Run** or you can use search bar provided by Google Cloud Console
 * Click on the **New Service**
-* Choose **Deploy one revision from an existing container image** and select the docker image had been pushed
+* Choose **Deploy one revision from an existing container image** and select the docker image has been pushed
 * Select the region **asia-southeast-2**
 * Choose **Allow unauthenticated invocations**
 * Then click **Create**
