@@ -22,8 +22,8 @@ This repository contains backend service for our mobile application focused on A
 ## Installation
 1. Clone repository to Google Cloud console
 ```
-git clone https://github.com/Usahayuk-Capstone-Project/Cloud-Computing.git
-cd Cloud-Computing
+git <your-github-url>
+cd <your-repo-name>
 ```
 3. Go to Firebase and create firebase project
 4. Download the API key for the Web Firebase Client SDK and copy to the .env
@@ -33,20 +33,16 @@ cd Cloud-Computing
 
 ## Deployment
 To deploy our REST API, we use containerize the app with Docker image, then push it to the Cloud Container Registry and deploy using Cloud Run. We use Cloud Shell as our terminal
-1. Clone your url github to google cloud project
-```
-git clone <your-github-url>
-```
-2. Build the Docker image
+1. Build the Docker image
 ```
 docker build -t <your-image-name> .
 ```
-3. Tag and push the image to Cloud Container Registry
+2. Tag and push the image to Cloud Container Registry
 ```
 docker tag <your-image-name> gcr.io/<your-gcp-id>/<your-image-name>
 docker push gcr.io/<your-gcp-id>/<your-image-name>
 ```
-4. Deploy it to the Cloud Run
+3. Deploy it to the Cloud Run
 * Go to **Navigation Menu -> Cloud Run** or you can use search bar provided by Google Cloud Console
 * Click on the **New Service**
 * Choose **Deploy one revision from an existing container image** and select the docker image had been pushed
