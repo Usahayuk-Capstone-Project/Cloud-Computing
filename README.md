@@ -22,7 +22,7 @@ This repository contains backend service for our mobile application focused on A
 ## Installation
 1. Clone repository to Google Cloud console
 ```
-git <your-github-url>
+git clone <your-github-url>
 cd <your-repo-name>
 ```
 3. Go to Firebase and create firebase project
