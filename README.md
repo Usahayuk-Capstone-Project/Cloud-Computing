@@ -1,6 +1,6 @@
 # Cloud Computing
 ## Overview
-This repository contains backend service for our mobile application focused on API for Usahayuk! whick includes more than 8 endpoints built to control user authetication, user management, user recommendation, and user articles. We also deploy the API to Cloud Run using Docker. There is three cloud services we used in total which includes:
+This repository contains backend service for our mobile application focused on API for Usahayuk! which includes more than 10 endpoints built to control user authetication, user management, user recommendation, and user articles. We also deploy the API to Cloud Run as we containerize the image with Docker. There is three cloud services we used in total which includes:
 1. Cloud Run
 - This service we use to containerized our API and backend services so it can be hit by mobile application to use our services.
 2. Firebase Authentication
