@@ -56,9 +56,9 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 
 ## How to Use API Endpoints
 ### 1. Sign Up
-URL: `/api/auth/signup`
-Method: `POST`
-Request Body:
+* URL: `/api/auth/signup`
+* Method: `POST`
+* Request Body:
 ```
 {
    "nama_lengkap" : "<your-name>",
@@ -66,17 +66,90 @@ Request Body:
    "kata_sandi" : "<your-passsword>"
 }
 ```
+* Success Response
+```
+{
+    "code": 200,
+    "userCredential": {
+        "uid": "<uid>",
+        "email": "<your-name>@example.com",
+        "emailVerified": false,
+        "displayName": "<your-name>",
+        "isAnonymous": false,
+        "providerData": [
+            {
+                "providerId": "password",
+                "uid": "<uid>",
+                "displayName": "<your-name>",
+                "email": "<your-name>@example.com",
+                "phoneNumber": null,
+                "photoURL": null
+            }
+        ],
+        "stsTokenManager": {
+            "refreshToken": "<your-refresh-token>",
+            "accessToken": "<your-access-token>",
+            "expirationTime": "<epoch-time>"
+        },
+        "createdAt": "<epoch-time>",
+        "lastLoginAt": "<epoch-time>",
+        "apiKey": "<api-key>",
+        "appName": "[DEFAULT]"
+    }
+}
+```
 ### 2. Sign In
-URL: `/api/auth/signup`
-Method: `POST`
-Request Body: 
+* URL: `/api/auth/signup`
+* Method: `POST`
+* Request Body: 
 ```
 {
    "alamat_email" : "<your-email-address>",
    "kata_sandi" : "<your-passsword>"
 }
 ```
+* Success Response:
+```
+{
+    "code": 200,
+    "userCredential": {
+        "uid": "<uid>",
+        "email": "<your-name>@example.com",
+        "emailVerified": false,
+        "displayName": "<your-name>",
+        "isAnonymous": false,
+        "providerData": [
+            {
+                "providerId": "password",
+                "uid": "<uid>",
+                "displayName": "<your-name>",
+                "email": "<your-name>@example.com",
+                "phoneNumber": null,
+                "photoURL": null
+            }
+        ],
+        "stsTokenManager": {
+            "refreshToken": "<your-refresh-token>",
+            "accessToken": "<your-access-token>",
+            "expirationTime": "<epoch-time>"
+        },
+        "createdAt": "<epoch-time",
+        "lastLoginAt": "<epoch-time>",
+        "apiKey": "<api-key>",
+        "appName": "[DEFAULT]"
+    }
+}
+```
 ### 3. Sign Out
+* URL: `/api/auth/signout`
+* Method: `GET`
+* Success Response
+```
+{
+    "code": 200,
+    "message": "User signed out"
+}
+```
 ### 4. Add Recommender
 ### 5. Update Recommender
 ### 6. Get User
