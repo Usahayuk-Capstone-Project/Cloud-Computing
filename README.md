@@ -58,3 +58,10 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 ### 1. Sign Up
 ### 2. Sign In
 ### 3. Sign Out
+### 4. Add Recommender
+### 5. Update Recommender
+### 6. Get User
+### 7. Update User
+### 8. Add Article
+### 9. Get Article
+### 8. Update Article
