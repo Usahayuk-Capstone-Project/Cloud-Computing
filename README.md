@@ -70,7 +70,7 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 ```
 {
     "code": 200,
-    "userCredential": {
+    "userRecord": {
         "uid": "<uid>",
         "email": "<your-name>@example.com",
         "emailVerified": false,
@@ -190,7 +190,7 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 ```
 {
     "code": 200,
-    "userRecord": {
+    "user": {
         "uid": "<your-uid>",
         "email": "<your-email>@example.com",
         "emailVerified": true,
@@ -250,5 +250,56 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 }
 ```
 ### 8. Add Article
+* URL: `/api/article/{uid}`
+* Method: `POST`
+* Request Body: 
+```
+{
+   "title" : "<write-article-title>",
+   "tags" : "#<first-tag> #<second-tag> #<third-tag>",
+   "penulis" : "<write-your-name>",
+   "content" : "<write-the-content>"
+}
+```
+* Success Response:
+```
+{
+    "message": "Article added successfully"
+}
+```
 ### 9. Get Article
+* URL: `/api/article/{uid}`
+* Method: `GET`
+* Success Response:
+```
+{
+    "code": 200,
+    "user": {
+        "penulis": "<your-name>",
+        "tags": "<tags>",
+        "updateAt": "<the-time-last-updated>",
+        "content": "<written-content>",
+        "title": "<title-article>",
+        "createdAt": "<the-time-created>",
+        "uid": "<your-id>"
+    }
+}
+```
 ### 8. Update Article
+* URL: `/api/article/{uid}`
+* Method: `PUT`
+* Request Body: 
+```
+{
+   "title" : "<write-article-title>",
+   "tags" : "#<first-tag> #<second-tag> #<third-tag>",
+   "penulis" : "<write-your-name>",
+   "content" : "<write-the-content>"
+}
+```
+* Success Response:
+```
+{
+    "message": "Article updated successfully"
+}
+```
