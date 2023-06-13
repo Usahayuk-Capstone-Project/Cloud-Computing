@@ -39,6 +39,17 @@ git clone <your-github-url>
 ```
 2. Build the Docker image
 ```
-docker build -t <your-image-name>
+docker build -t <your-image-name> .
 ```
-3. 
+3. Tag and push the image to Cloud Container Registry
+```
+docker tag <your-image-name> gcr.io/<your-gcp-id>/<your-image-name>
+docker push gcr.io/<your-gcp-id>/<your-image-name>
+```
+4. Deploy it to the Cloud Run
+* Go to **Navigation Menu -> Cloud Run** or you can use serach bar provided by Google Cloud Console
+* Click on the **New Service**
+* Choose **Deploy one revision from an existing container image** and select the docker image had been pushed
+* Select the region **asia-southeast-2**
+* Choose **Allow unauthenticated invocations**
+* Then click **Create**
