@@ -151,7 +151,7 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 }
 ```
 ### 4. Add Recommender
-* URL: `/api/recommender/{uid}
+* URL: `/api/recommender/{uid}`
 * Method: `POST`
 * Request Body: 
 ```
@@ -174,7 +174,7 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 }
  ```
 ### 5. Get Recommender
-* URL: `/api/recommender/{uid}
+* URL: `/api/recommender/{uid}`
 * Method: `GET`
 * Success Response:
 ```
@@ -184,8 +184,71 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 }
 ```
 ### 6. Get User
-
+* URL: `/api/user/{uid}`
+* Method: `GET`
+* Success Response:
+```
+{
+    "code": 200,
+    "userRecord": {
+        "uid": "<your-uid>",
+        "email": "<your-email>@example.com",
+        "emailVerified": true,
+        "displayName": "<your-name>",
+        "disabled": false,
+        "metadata": {
+            "lastSignInTime": "<timestamp>",
+            "creationTime": "<timestamp>"
+        },
+        "tokensValidAfterTime": "<timestamp>",
+        "providerData": [
+            {
+                "uid": "<your-uid>",
+                "displayName": "<your-name>",
+                "email": "<your-name>@example.com",
+                "providerId": "password"
+            }
+        ]
+    }
+}
+```
 ### 7. Update User
+* URL: `/api/user/{uid}`
+* Method: `PUT`
+* Request Body: 
+```
+{
+  "nama_lengkap": "<your-full-name>",
+  "alamat_email": "<your-email-address>",
+  "kata_sandi": "<your-new-pass>"
+}
+```
+* Success Response:
+```
+{
+    "message": "User record updated successfully",
+    "Record": {
+        "uid": "<your-uid>",
+        "email": "<your-new-email>@example.com",
+        "emailVerified": true,
+        "displayName": "<your-new-name>",
+        "disabled": false,
+        "metadata": {
+            "lastSignInTime": "<timestamp>",
+            "creationTime": "<timestamp>"
+        },
+        "tokensValidAfterTime": "<timestamp>",
+        "providerData": [
+            {
+                "uid": "<your-uid>",
+                "displayName": "<your-new-name>",
+                "email": "<your-new-email>@example.com",
+                "providerId": "password"
+            }
+        ]
+    }
+}
+```
 ### 8. Add Article
 ### 9. Get Article
 ### 8. Update Article
