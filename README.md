@@ -19,7 +19,7 @@ This repository contains backend service for our mobile application focused on A
 * Github
 * Postman
 
-## Installation & Deployment
+## Installation
 1. Clone repository to Google Cloud console
 ```
 git clone https://github.com/Usahayuk-Capstone-Project/Cloud-Computing.git
@@ -28,4 +28,17 @@ cd Cloud-Computing
 3. Go to Firebase and create firebase project
 4. Download the API key for the Web Firebase Client SDK and copy to the .env
 5. Download the serviceAccountKey.json from Firebase Admin SDK and upload it to the directory
-6. Replace the contain of _const serviceAccount_ match to the file directory serviceAccountKey has been uploaded
+6. Replace the contain of _const serviceAccount_ match to the file directory serviceAccountKey uploaded
+7. Run the code. This should run on port 8080
+
+## Deployment
+To deploy our REST API, we use containerize the app with Docker image, then push it to the Cloud Container Registry and deploy using Cloud Run. We use Cloud Shell as our terminal
+1. Clone your url github to google cloud project
+```
+git clone <your-github-url>
+```
+2. Build the Docker image
+```
+docker build -t <your-image-name>
+```
+3. 
