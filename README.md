@@ -26,10 +26,11 @@ git clone <your-github-url>
 cd <your-repo-name>
 ```
 3. Go to Firebase and create firebase project
-4. Download the API key for the Web Firebase Client SDK and copy to the .env
-5. Download the serviceAccountKey.json from Firebase Admin SDK and upload it to the directory
-6. Replace the contain of _const serviceAccount_ match to the file directory serviceAccountKey uploaded
-7. Run the code. This should run on port 8080
+4. Activate service for Authentication and Firestore
+5. Download the API key for the Web Firebase Client SDK and copy to the .env
+6. Download the serviceAccountKey.json from Firebase Admin SDK and upload it to the directory
+7. Replace the contain of _const serviceAccount_ match to the file directory serviceAccountKey uploaded
+8. Run the code. This should run on port 8080
 
 ## Deployment
 To deploy our REST API, we use containerize the app with Docker image, then push it to the Cloud Container Registry and deploy using Cloud Run. We use Cloud Shell as our terminal
