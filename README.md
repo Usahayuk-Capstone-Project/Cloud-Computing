@@ -57,8 +57,25 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 ## How to Use API Endpoints
 ### 1. Sign Up
 URL: `/api/auth/signup`
-
+Method: `POST`
+Request Body:
+```
+{
+   "nama_lengkap" : "<your-name>",
+   "alamat_email" : "<your-email-address>",
+   "kata_sandi" : "<your-passsword>"
+}
+```
 ### 2. Sign In
+URL: `/api/auth/signup`
+Method: `POST`
+Request Body: 
+```
+{
+   "alamat_email" : "<your-email-address>",
+   "kata_sandi" : "<your-passsword>"
+}
+```
 ### 3. Sign Out
 ### 4. Add Recommender
 ### 5. Update Recommender
