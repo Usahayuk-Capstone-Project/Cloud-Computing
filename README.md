@@ -151,8 +151,40 @@ docker push gcr.io/<your-gcp-id>/<your-image-name>
 }
 ```
 ### 4. Add Recommender
-### 5. Update Recommender
+* URL: `/api/recommender/{uid}
+* Method: `POST`
+* Request Body: 
+```
+{
+   "skala_usaha" : "<input-this-field>",
+   "modal_usaha" : "<input-this-field>",
+   "bidang_usaha" : "<input-this-field>",
+   "omset_usaha" : "<input-this-field>",
+   "usia_targetpelanggan" : "<input-this-field>",
+   "gender_targetpelanggan" : "<input-this-field>",
+   "pekerjaan_targetpelanggan" : "<input-this-field>",
+   "status_targetpelanggan" : "<input-this-field>",
+   "jenis_lokasi_" : "<input-this-field>"
+}
+```
+* Success Response:
+ ```
+ {
+    "message": "User record updated successfully"
+}
+ ```
+### 5. Get Recommender
+* URL: `/api/recommender/{uid}
+* Method: `GET`
+* Success Response:
+```
+{
+    "code": 200,
+    "Hasil_rekomendasi": []
+}
+```
 ### 6. Get User
+
 ### 7. Update User
 ### 8. Add Article
 ### 9. Get Article
